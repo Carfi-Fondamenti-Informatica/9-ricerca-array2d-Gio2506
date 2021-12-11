@@ -3,19 +3,27 @@
 
 using namespace std;
 
+int ArrayNomi (char bid[10][20], char nome[]);
+
+
+
 int main() {
-char bid [10][20];
-for (int i=0;i<10;i++) {
-    char nome[20];
-    cout << "inserisci" << " " << "nome";
-    cin >> nome;
-    bid[i][20] = nome[20];
+    char bid [10][20]={0};
+    char nome [20]={0};
+
+    cout<<"inserisci i 10 nomi"<<endl;
+    for (size_t i=0; i<10;i++)
+        cin >>bid[i];
+    cout <<"inserisci nome da cercare "<<endl;
+    nome[20];
+    for ( int j=0; j<20;j++)
+        nome[j];
+    cin>>nome;
+    int posizione= ArrayNomi (bid,nome);
+    if (posizione >= 0){
+        cout<< " presente nella posizione="<< posizione<< endl;
+    }else{
+        cout << "non presente"<< endl;
+    }
 }
 
-char mono[20];
-cin>>mono ;
-ArrayNomi (bid,mono);
-
-
-    return 0;
-}
